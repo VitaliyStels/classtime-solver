@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Classtime Solver",
+  "version": "0.0.1",
+  "description": "An app to swiftly solve classtimes",
+  "permissions": [ "activeTab", "scripting" ],
+   "icons": {
+    "16": "icon/icon48.png",
+    "128": "icon/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permission": [
+    "https://classtime.com//"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "logic.js"
+      ],
+      "matches": [
+        "https://classtime.com//"
+      ]
+    }
+  ]
+}
